@@ -1,0 +1,35 @@
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Ignore Python cache and environment files (if applicable)
+__pycache__/
+.env
+*.pyc
+
+# Ignore node modules (if using Node.js)
+node_modules/
+
+# Ignore build/output directories
+/dist
+/build
+/out
+
+# Ignore log files
+*.log
+
+# Ignore sensitive files
+.secret
+*.pem
+*.key
+
+# Ignore package lock files if needed
+package-lock.json
+yarn.lock

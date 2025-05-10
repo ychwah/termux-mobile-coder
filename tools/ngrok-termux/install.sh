@@ -25,6 +25,7 @@ download_ngrok() {
 
     echo -e "\e[32mCopying binary ngrok to $HOME/.tmd/bin/ngrok\e[0m"
     chmod +x $HOME/ngrok
+    mkdir -p $HOME/.tmd/bin/
     mv $HOME/ngrok $HOME/.tmd/bin/ngrok
 
     echo -e "\e[32mCopying ngrok command to $PREFIX/bin/ngrok\e[0m"

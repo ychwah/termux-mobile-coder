@@ -15,12 +15,12 @@ install() {
     SetHandler application/x-httpd-php
 </FilesMatch> 
 
-#LoadModule php_module libexec/apache2/libphp.so 
+LoadModule php_module libexec/apache2/libphp.so 
 EOF
 
     echo -e '#!/data/data/com.termux/files/usr/bin/bash\nstatus=$(pgrep -l mariadbd)\nif [ -z "$status" ]; then\n\tmariadbd-safe &\nfi\napachectl start\necho "Apache PHPMyAdmin started..."\necho "Running on http://127.0.0.1:8080/phpmyadmin"\ntermux-open http://127.0.0.1:8080/phpmyadmin' > pma-start
     echo -e '#!/data/data/com.termux/files/usr/bin/bash\napachectl stop\necho "Stopped PHPMyAdmin process."\necho "To stop MariaDB process as well, run \"pkill -f mariadb\""' > pma-stop
-    echo -e '#!/data/data/com.termux/files/usr/bin/bash\npkg uninstall phpmyadmin apache2 php-apache -y\napt purge apache2\nrm $PREFIX/bin/pma-start $PREFIX/bin/pma-stop $PREFIX/bin/pma-uninstall\necho "Uninstalled PHPMyAdmin..."' > pma-uninstall
+    echo -e '#!/data/data/com.termux/files/usr/bin/bash\npkg uninstall phpmyadmin apache2 php-apache -y\napt purge apache2 -y\napt autoremove -y\nrm -rf $PREFIX/etc/apache2/\nrm -rf $PREFIX/var/log/apache2/\nrm $PREFIX/bin/pma-start $PREFIX/bin/pma-stop $PREFIX/bin/pma-uninstall\necho "Uninstalled PHPMyAdmin..."' > pma-uninstall
 
     chmod +x pma-start pma-stop pma-uninstall
 

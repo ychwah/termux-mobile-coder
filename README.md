@@ -14,7 +14,7 @@ An ongoing repository for developing applications and tools that can increase pr
 
 
 ## Frameworks
-*Coming soon.*
+- [Laravel](/tree/master/framework/laravel) - Develop Laravel applications on your phone! Same workflow, easier development with Laravel tools.
 
 ## Contributing
 If you've developed something amazing and would like to see it listed here, please feel free to contribute! Check the [*CONTRIBUTING.md*](/blob/main/CONTRIBUTING.md) file for guidelines.

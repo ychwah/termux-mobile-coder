@@ -7,6 +7,8 @@ install() {
     # Allow No Password for login
     sed -i "s/\(\$cfg\['Servers'\]\[\$i\]\['AllowNoPassword'\] = \)\s*false;/\1true;/" $PREFIX/share/phpmyadmin/config.inc.php
 
+    sed -i '/# LoadModule foo_module modules\/mod_foo.so/ a\LoadModule php_module libexec/apache2/libphp.so' $PREFIX/etc/apache2/httpd.conf
+
     sed -i '/LoadModule mpm_worker_module libexec\/apache2\/mod_mpm_worker\.so/ s/^/#/' $PREFIX/etc/apache2/httpd.conf
     sed -i '/#LoadModule mpm_prefork_module libexec\/apache2\/mod_mpm_prefork\.so/ s/^#//' $PREFIX/etc/apache2/httpd.conf
 
@@ -14,8 +16,6 @@ install() {
 <FilesMatch \.php$>
     SetHandler application/x-httpd-php
 </FilesMatch> 
-
-LoadModule php_module libexec/apache2/libphp.so 
 EOF
 
     echo -e '#!/data/data/com.termux/files/usr/bin/bash\nstatus=$(pgrep -l mariadbd)\nif [ -z "$status" ]; then\n\tmariadbd-safe &\nfi\napachectl start\necho "Apache PHPMyAdmin started..."\necho "Running on http://127.0.0.1:8080/phpmyadmin"\ntermux-open http://127.0.0.1:8080/phpmyadmin' > pma-start

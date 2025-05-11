@@ -16,6 +16,8 @@ install() {
         echo "Added $COMPOSER_BIN to ~/.bashrc"
     fi
 
+    source ~/.bashrc
+
     echo -e "\e[32mLaravel was set up successfully...\e[0m"
     echo -e "Run \"composer create-project laravel/laravel <project name>\""
     echo "or \"laravel new <project name>\" to create a fresh Laravel project"

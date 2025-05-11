@@ -10,5 +10,5 @@ The setup requires `wget` to run and assumes an updated and upgraded termux envi
 
 Get the installation script and run it.  
 ```sh 
-    wget https://raw.githubusercontent.com/ychwah/termux-mobile-coder/master/framework/laravel/install.sh | sh install.sh
+    wget -O - https://raw.githubusercontent.com/ychwah/termux-mobile-coder/master/framework/laravel/install.sh | bash
 ```

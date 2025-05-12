@@ -11,6 +11,7 @@ An ongoing repository for developing applications and tools that can increase pr
 ## Tools
 - [NGROK](tools/ngrok-termux) ([ngrok.com](https://ngrok.com)) - Run ngrok command for making your apps public or sharing your APIs online on your phone.
 - [Kali Nethunter](tools/kali-nethunter-termux) - Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty.
+- [DigitalOcean DOCTL](tools/doctl) - doctl is a command-line interface (CLI) for the DigitalOcean API, now available for Termux.
 
 
 ## Frameworks

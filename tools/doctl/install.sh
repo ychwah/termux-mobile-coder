@@ -21,7 +21,7 @@ install () {
     mv $HOME/doctl $HOME/.tmd/bin/doctl
 
     echo -e "\e[32mCopying doctl command to $PREFIX/bin/doctl\e[0m"
-    echo -e '#!/data/data/com.termux/files/usr/bin/bash\nexport USER=$(whoami)\ngrun $HOME/.tmd/bin/doctl "$@"' > doctl
+    echo -e '#!/data/data/com.termux/files/usr/bin/bash\nexport USER=$(whoami)\n$HOME/.tmd/bin/doctl "$@"' > doctl
     chmod +x doctl
     mv doctl $PREFIX/bin/doctl
 

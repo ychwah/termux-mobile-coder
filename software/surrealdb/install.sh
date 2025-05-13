@@ -270,8 +270,8 @@ install() {
 
     rm -rf $HOME/tmp
 
-    echo '#!/data/data/com.termux/files/usr/bin/bash\ngrun $HOME/.tmd/bin/surreal "$@"' > $PREFIX/bin/surreal
-    echo '#!/data/data/com.termux/files/usr/bin/bash\nrm -rf $HOME/.tmd/bin/surreal\nrm -f $PREFIX/bin/surreal\nrm -f $PREFIX/bin/surreal-uninstall' > $PREFIX/bin/surreal-uninstall
+    echo -e '#!/data/data/com.termux/files/usr/bin/bash\ngrun $HOME/.tmd/bin/surreal "$@"' > $PREFIX/bin/surreal
+    echo -e '#!/data/data/com.termux/files/usr/bin/bash\nrm -rf $HOME/.tmd/bin/surreal\nrm -f $PREFIX/bin/surreal\nrm -f $PREFIX/bin/surreal-uninstall' > $PREFIX/bin/surreal-uninstall
     chmod +x $PREFIX/bin/surreal $PREFIX/bin/surreal-uninstall
 
     # Exit cleanly

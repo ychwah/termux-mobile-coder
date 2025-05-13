@@ -6,25 +6,17 @@ Ngrok is a tunneling service that allows developers to securely expose local ser
 
 ## Setup
 
-The setup requires `wget` to run. If you have not installed it yet, run `pkg install wget` in Termux
+The setup requires `wget` to run and assumes an updated and upgraded termux environment. If you have not done so, run `pkg update && pkg upgrade && pkg install wget` in Termux
 
-1.   Get the installation script.  
-    `wget https://raw.githubusercontent.com/ychwah/termux-mobile-coder/master/tools/ngrok-termux/install.sh`
-2.  Make install script executable  
-    `chmod +x install.sh`
-3.  Run `install.sh`  
-    `./install.sh`
-4.  Remove `install.sh` after setting up ngrok  
-    `rm install.sh`
+Get the installation script.  
+```sh 
+    wget -O - https://raw.githubusercontent.com/ychwah/termux-mobile-coder/master/tools/ngrok-termux/install.sh | bash
+```
 
 ## Uninstalling
 Uninstall ngrok completely from Termux
 
-1.   Get the uninstall script.  
-    `wget https://raw.githubusercontent.com/ychwah/termux-mobile-coder/master/tools/ngrok-termux/uninstall.sh`
-2.  Make install script executable  
-    `chmod +x uninstall.sh`
-3.  Run `uninstall.sh`  
-    `./uninstall.sh`
-4.  Remove `uninstall.sh` after removing ngrok  
-    `rm uninstall.sh`
+Get the uninstall script.  
+```sh 
+    wget -O - https://raw.githubusercontent.com/ychwah/termux-mobile-coder/master/tools/ngrok-termux/uninstall.sh | bash
+```

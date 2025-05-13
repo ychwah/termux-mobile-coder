@@ -6,7 +6,7 @@ Laravel is a popular open-source PHP framework designed for building modern, sca
 
 ## Setup
 
-The setup requires `wget` to run and assumes an updated and upgraded termux environment. If you have not done so, run `pkg upgrade && pkg update && pkg install wget` in Termux
+The setup requires `wget` to run and assumes an updated and upgraded termux environment. If you have not done so, run `pkg update && pkg upgrade && pkg install wget` in Termux
 
 Get the installation script and run it.  
 ```sh 

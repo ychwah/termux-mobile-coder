@@ -7,6 +7,7 @@ An ongoing repository for developing applications and tools that can increase pr
 
 ## Software
 - [PHPMyAdmin](software/phpmyadmin) - Run PHPMyAdmin on Termux to view and manage database queries and transactions.
+- [SurrealDB](software/surrealdb) - Run SurrealD, an open-source, modern database designed for real-time applications with Termux.
 
 ## Tools
 - [NGROK](tools/ngrok-termux) ([ngrok.com](https://ngrok.com)) - Run ngrok command for making your apps public or sharing your APIs online on your phone.

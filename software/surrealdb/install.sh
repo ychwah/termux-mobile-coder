@@ -28,6 +28,10 @@ mkdir -p $HOME/.tmd/bin/
 
 INSTALL_DIR="$HOME/.tmd/bin/"
 
+# Install dependencies for running grun or glibc-runner
+pkg install glibc-repo -y
+pkg install glibc-runner -y
+
 
 SURREALDB_ROOT="https://download.surrealdb.com"
 
